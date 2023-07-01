@@ -45,12 +45,20 @@ const showWishlist = (wishList)=>{
 }
 
 parentWishlistContainerEle.addEventListener('click' , (event)=>{
-    // console.log(event.target);
-    const itemToDelete = event.target.name;
-    
+    const target = event.target;
+  
+  // Check if the clicked element is a checkbox
+  if (target.tagName === 'INPUT' && target.type === 'checkbox') {
+    // Handle checkbox state change here (e.g., update a checked property)
+    const isChecked = target.checked;
+    // ...
+  }
+
+  // Check if the clicked element is a delete button
+  if (target.tagName === 'BUTTON' && target.name) {
+    const itemToDelete = target.name;
     wishList = wishList.filter(item => item !== itemToDelete);
     parentWishlistContainerEle.innerHTML = '';
     showWishlist(wishList);
-    
-    
+  }
 })
