@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wishlist App</title>
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="main">
-        <h1>Wlist</h1>
-        <form action="" class="form">
-            <input  class="input" required type="text" placeholder="Add your WishList here...">
-            <button class="button">Add</button>
-        </form>
-        <div class="wishlist-container">
-            <div class="wishlist">
+        <header>
+            <div class="logo">
+                <!-- logo -->
+                <img src="./icon.png" alt="Logo">
+            </div>
+            <div style="display: flex;align-items: center; margin-left: 3rem;">
+                <h1>Wish List</h1>
+            </div>
+                
+        </header>
+        <div class="mainbody">
+            <form action="" class="form">
+                <input  class="input" required type="text" placeholder="Add your WishList here...">
+                <button class="button"><img src="./add.png" alt="Add Icon"></button>
+            </form>
+            <div class="wishlist-container">
+                <div class="wishlist">
+                </div>
             </div>
         </div>
     </main>

@@ -5,32 +5,33 @@ const parentWishlistContainerEle = document.querySelector(".wishlist-container")
 
 let wishlistValue = "";
 let wishList =[];
+let count = 0;
 
 wishlistInputElement.addEventListener('input' , (event)=>{ //input or keyup
     wishlistValue = event.target.value;
-    // console.log(wishlistValue);
 })
 
 form.addEventListener('submit' , (event)=>{
     event.preventDefault();
-    // console.log('Clicked');
-    // wishList.push(wishlistValue);
+    count++;
     wishList = [...wishList , wishlistValue];
     wishlistInputElement.value="";
     parentWishlistContainerEle.innerHTML = '';
     showWishlist(wishList);
-    // console.log(wishList);
+    console.log(count);
 })
 
 const showWishlist = (wishList)=>{
     for(let wish of wishList){
         const containerEle = document.createElement('div');
+        containerEle.className="list-item";
 
         const checkBoxEle = document.createElement('input');
         checkBoxEle.setAttribute('type','checkbox');
         containerEle.appendChild(checkBoxEle);
 
-        const wishlistTextEle = document.createElement('span');
+        const wishlistTextEle = document.createElement('div');
+        wishlistTextEle.style.width='400px';
         wishlistTextEle.innerText = wish;
         containerEle.appendChild(wishlistTextEle);
 
@@ -53,7 +54,7 @@ parentWishlistContainerEle.addEventListener('click' , (event)=>{
     const isChecked = target.checked;
     
     let wishListTextEle = target.nextElementSibling;
-    wishListTextEle.style.textDecoration = target.checked ? 'line-through': 'none' ;
+    wishListTextEle.style.textDecoration = isChecked ? 'line-through': 'none' ;
     
     
   }
