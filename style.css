@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    display: flex;
+    align-content: center;
+    /* justify-content: space-around; */
+    padding-left: 7rem;
+    
+}
+h1{
+    font-weight: 200;
+}
+body{
+    height: 100vh;
+    background:linear-gradient(180deg , rgba(255, 255, 0, 0.629) , rgba(128, 0, 128, 0.605));
+    
+}
+.logo img{
+    height: 70px;
+}
+
+::placeholder{
+    font-style: italic;
+    text-align: center;
+}
+.mainbody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.form{
+    width: 650px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #fff;
+}
+.form button{
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    border-style: none;
+    border-radius: 50%;
+}
+.form button img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.form input{
+    width: 550px;
+    padding: 15px;
+    padding-left: 40px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-radius: 40px;
+}
+.form input:focus{
+    outline: none;
+}
+.wishlist-container{
+    width: 700px;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list-item{
+    height: 60px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    margin: 8px 0;
+    padding: 8px;
+}

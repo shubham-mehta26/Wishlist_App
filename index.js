@@ -51,7 +51,11 @@ parentWishlistContainerEle.addEventListener('click' , (event)=>{
   if (target.tagName === 'INPUT' && target.type === 'checkbox') {
     // Handle checkbox state change here (e.g., update a checked property)
     const isChecked = target.checked;
-    // ...
+    
+    let wishListTextEle = target.nextElementSibling;
+    wishListTextEle.style.textDecoration = target.checked ? 'line-through': 'none' ;
+    
+    
   }
 
   // Check if the clicked element is a delete button
